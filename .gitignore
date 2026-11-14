@@ -1,0 +1,10 @@
+# Python tooling and tests
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+
+# Local project or IDE state
+.DS_Store
+.idea/
+.vscode/
