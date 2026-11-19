@@ -1,4 +1,4 @@
-name: Validate migration skill
+name: Validate Muse Agent Skills
 
 on:
   pull_request:
@@ -22,5 +22,7 @@ jobs:
           python-version: ${{ matrix.python-version }}
       - name: Check Python scripts
         run: python -m compileall -q skills/mulesoft-to-muse/scripts
-      - name: Run skill tests
+      - name: Run migration skill tests
         run: python -m unittest discover -s skills/mulesoft-to-muse/tests -v
+      - name: Run native development skill tests
+        run: python -m unittest discover -s skills/building-with-muse/tests -v
